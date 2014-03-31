@@ -5,7 +5,7 @@
 #include <math.h>
 
 /* Specify the data layout format */
-const DLayout dlayout = ColMaj;
+const DLayout dlayout = RowMaj;
 
 void randInitialize(int sz, double *vPtr)
 {
