@@ -12,7 +12,7 @@ void matMult_opt(int N, const double *matA, const double *matB, double *matC)
     // Code in your optimized implementation here
 
     int i, j, k;
-    double tmp;
+    double tmp = 0;
     //int dlayout = RowMaj;
 
     //if(dlayout == RowMaj)

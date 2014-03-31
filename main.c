@@ -188,7 +188,10 @@ int main(int argc, const char *argv[])
                     printf("\n");
                     displayMat(N,N,matB);
                     printf("\n");
-                    displayMat(N,N,matC1);
+		    if (execNaive) 
+                    	displayMat(N,N,matC1);
+		    if (execOPT)
+			displayMat(N,N,matC2);
                     printf("\n");
                 }
 
