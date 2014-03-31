@@ -1,6 +1,7 @@
 #include "ecse425projOPT.h"
 #include "ecse425proj.h"
-
+#include <stdio.h>
+#include <stdlib.h>
 
 void matVecMult_opt(int N, const double *matA, const double *vecB, double *vecC) 
 {
@@ -37,6 +38,5 @@ void matMult_opt(int N, const double *matA, const double *matB, double *matC)
             }
         }
     }*/
-
 }
 
