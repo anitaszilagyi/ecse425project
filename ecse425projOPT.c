@@ -19,12 +19,13 @@ void matMult_opt(int N, const double *matA, const double *matB, double *matC)
     //if(dlayout == RowMaj)
     //{
         for (i = 0; i < N; i++) {
-            for (j = 0; j < N; j++)
+            for (j = 0; j < N; j++) {
                 tmp = 0;
 		for (k = 0; k < N; k++) {
                     tmp += matA[i * N + k] * matB[k * N + j];
                 }
 		matC[i * N + j] = tmp;
+	    }
         }
     /*} else {
 
