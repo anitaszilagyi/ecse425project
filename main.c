@@ -133,28 +133,8 @@ int main(int argc, const char *argv[])
                 if(execOPT)   matC2 = (double *) malloc(N*N * sizeof(double));
 
                 // Initialize matrix values
-                // randInitialize(N*N,matA);
-                // randInitialize(N*N,matB);
-
-                matA[0] = 1.0;
-                matA[1] = 2.0;
-                matA[2] = 3.0;
-                matA[3] = 4.0;
-		matA[4] = 5.0;
-		matA[5] = 6.0;
-		matA[6] = 7.0;
-		matA[7] = 8.0;
-		matA[8] = 9.0;
-
-                matB[0] = 10.0;
-                matB[1] = 11.0;
-                matB[2] = 12.0;
-                matB[3] = 13.0;
-                matB[4] = 14.0;
-                matB[5] = 15.0;
-                matB[6] = 16.0;
-                matB[7] = 17.0;
-                matB[8] = 18.0;
+                randInitialize(N*N,matA);
+                randInitialize(N*N,matB);
 
                 clock_t tic, toc;
                 double tm;

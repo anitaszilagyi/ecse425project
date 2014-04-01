@@ -3,6 +3,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+int min (int a, int b) {
+	if (a < b)
+	  return a;
+	else return b;
+}
+
 void matVecMult_opt(int N, const double *matA, const double *vecB, double *vecC) 
 {
     // Code in your optimized implementation here
@@ -23,19 +29,22 @@ void matMult_opt(int N, const double *matA, const double *matB, double *matC)
 {
     // Code in your optimized implementation here
 
-    int i, j, k;
+    int i, j, k, jj, kk;
     double tmp = 0;
+    int B = N/2;
     //int dlayout = RowMaj;
 
     //if(dlayout == RowMaj)
     //{
+   	for (jj = 0; jj < N; jj = jj + B) 
+	for (kk = 0; kk < N; kk = kk + B)
         for (i = 0; i < N; i++) {
-            for (j = 0; j < N; j++) {
+            for (j = jj; j < min(jj + B, N); j++) {
                 tmp = 0;
-		for (k = 0; k < N; k++) {
+		for (k = kk; k < min(kk + B, N); k++) {
                     tmp += matA[i * N + k] * matB[k * N + j];
                 }
-		matC[i * N + j] = tmp;
+		matC[i * N + j] += tmp;
 	    }
         }
     /*} else {
