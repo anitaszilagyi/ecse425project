@@ -51,10 +51,11 @@ void matMult(int N, const double *matA, const double *matB, double *matC)
     if(dlayout == RowMaj)
     {
         for (i = 0; i < N; i++) {
-            for (j = 0; j < N; j++) 
+            for (j = 0; j < N; j++) { 
                 for (k = 0; k < N; k++) {
                     matC[i * N + j] += matA[i * N + k] * matB[k * N + j]; 
                 }
+	    }
         }
     } else {
 
