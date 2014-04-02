@@ -195,16 +195,8 @@ int main(int argc, const char *argv[])
                 if(execOPT)   vecC2 = (double *) malloc(N*N * sizeof(double));
 
                 // Initialize values
-                // randInitialize(N*N,matA);
-                // randInitialize(N,vecB);
-
-                matA[0] = 1.0;
-                matA[1] = 2.0;
-                matA[2] = 3.0;
-                matA[3] = 4.0;
-
-                vecB[0] = 5.0;
-                vecB[1] = 6.0;
+                randInitialize(N*N,matA);
+                randInitialize(N,vecB);
 
                 clock_t tic, toc;
                 double tm;
