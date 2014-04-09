@@ -1,3 +1,7 @@
+// ECSE 425 final project
+// Loren Lugosch
+// Anita Szilagyi
+
 #include "ecse425projOPT.h"
 #include "ecse425proj.h"
 #include <stdio.h>
